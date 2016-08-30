@@ -1,17 +1,26 @@
+
+$primary-color: #1D2026;
+
+$secondary-color:#F1F1F1;
+
+
+
 .title{
+	color: $primary-color;
 	text-align:center;
 	text-transform:uppercase;
+	margin:100px 0;
 }
 
 #banner{
-	height: 100vh;
-	background-color: #777;
+	height: 700px;
 	overflow: auto;
 }
 
 .jumbotron{
 	margin:auto;
 	background: none;
+	color: $primary-color;
 	width: 500px;
 	text-align:center;
 	&__img{
@@ -22,9 +31,13 @@
 }
 
 #about{
-	height: 400px;
-	overflow:auto;
+	background-color: $primary-color;
+	color: #fff;
+	height: 600px;
 	text-align:center;
+	.title{
+		color: #fff;
+	}
 }
 
 .about-header{
@@ -35,32 +48,9 @@
 }
 
 .skill{
-	
-	&__bar{
-		background-color: red;
-		width:300px;
-		height: 50px;
-	}
 	&__progress{
-		background-color : blue;
-		height: 50px;
-		&--poor{
-			width: 20%;
-		}
-		&--low{
-			width: 40%;
-		}	
-		&--average{
-			width: 60%;
-		}
-		&--high{
-			width: 80%;
-		}
-		&--ninja{
-			width:100%
-		}
+		background-color: $primary-color;
 	}
-
 }
 
 .portfolio-container{
@@ -78,11 +68,10 @@
 		color: #fff;
 		font-weight: bold;
 		text-decoration: none;
-		background:rgba(0,0,0,0.7);
+		background:rgba(138,170,217,0.7);
 		-webkit-animation: fadeIn 1s;
 	    animation: fadeIn 1s;
 		display: none;
-		border: 1px solid red;
 	}
 	&:hover &__description{
 		display: flex;
@@ -99,4 +88,73 @@
 @keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
+}
+
+
+#contact{
+	h3{
+		i{
+			margin-right: 10px;
+		}
+	}
+}
+
+
+.contact{
+
+	&__form{
+		input{
+			color: $primary-color;
+			background-color: $secondary-color;
+			margin:30px 0;
+			&::-webkit-input-placeholder {
+			   color: $primary-color;
+			}
+		}
+		textarea{
+			color: $primary-color;
+			background-color: $secondary-color;
+			&::-webkit-input-placeholder {
+			   color: $primary-color;
+			}
+		}
+
+		.boton{
+			background-color: $primary-color;
+			color: #fff;
+		}
+
+	}
+	&__description{
+		margin: 30px 0;
+	}
+
+}
+
+
+
+.social{
+	width: 100%;
+	&-list{
+		padding: 0;
+		a{
+			text-decoration: none;
+		}
+		li{
+			display: inline;
+		}
+		.icon{
+			font-size: 40px;	
+			margin-top: 50px;
+			&-list{
+				padding-right: 50px;
+			}
+		}
+	}
+
+}
+
+footer{
+	background-color: $primary-color;
+	height: 300px;
 }
