@@ -1,22 +1,32 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .title {
-  color: #1D2026;
+  color: #38A5DB;
   text-align: center;
   text-transform: uppercase;
   margin: 100px 0;
 }
 
 #banner {
-  height: 700px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/office-1500461_1920.jpg) no-repeat center center fixed;
+  height: 800px;
   overflow: auto;
 }
 
 .jumbotron {
-  margin: auto;
+  margin: 100px auto;
   background: none;
-  color: #1D2026;
+  color: #38A5DB;
   width: 500px;
   text-align: center;
 }
+
 .jumbotron__img {
   height: 300px;
   width: 300px;
@@ -24,13 +34,14 @@
 }
 
 #about {
-  background-color: #1D2026;
-  color: #fff;
+  background-color: #fff;
+  color: #38A5DB;
   height: 600px;
   text-align: center;
 }
+
 #about .title {
-  color: #fff;
+  color: #38A5DB;
 }
 
 .about-header__paragraph {
@@ -39,7 +50,11 @@
 }
 
 .skill__progress {
-  background-color: #1D2026;
+  background-color: #38A5DB;
+}
+
+#portfolio {
+  margin-bottom: 50px;
 }
 
 .portfolio-container {
@@ -51,17 +66,20 @@
   height: 260px;
   background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&txt=260%C3%97260&w=260&h=260);
   -webkit-animation: fadeIn 1.5s;
+  border: 4px #fff solid;
 }
+
 .project__description {
+  background: rgba(56, 165, 219, 0.5);
   height: 260px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  background: rgba(138, 170, 217, 0.7);
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
   display: none;
 }
+
 .project:hover .project__description {
   display: flex;
   flex-direction: column;
@@ -77,6 +95,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -85,29 +104,43 @@
     opacity: 1;
   }
 }
+
 #contact h3 i {
   margin-right: 10px;
 }
 
+#contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/hand-1076597_1920.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .contact__form input {
-  color: #1D2026;
+  color: #38A5DB;
   background-color: #F1F1F1;
   margin: 30px 0;
 }
+
 .contact__form input::-webkit-input-placeholder {
-  color: #1D2026;
+  color: #38A5DB;
 }
+
 .contact__form textarea {
-  color: #1D2026;
+  color: #38A5DB;
   background-color: #F1F1F1;
 }
+
 .contact__form textarea::-webkit-input-placeholder {
-  color: #1D2026;
+  color: #38A5DB;
 }
+
 .contact__form .boton {
-  background-color: #1D2026;
+  background-color: #38A5DB;
   color: #fff;
 }
+
 .contact__description {
   margin: 30px 0;
 }
@@ -115,24 +148,61 @@
 .social {
   width: 100%;
 }
+
 .social-list {
   padding: 0;
 }
+
 .social-list a {
   text-decoration: none;
 }
+
 .social-list li {
   display: inline;
 }
+
 .social-list .icon {
+  color: #38A5DB;
   font-size: 40px;
   margin-top: 50px;
 }
+
 .social-list .icon-list {
   padding-right: 50px;
 }
 
 footer {
-  background-color: #1D2026;
-  height: 300px;
+  background-color: #38A5DB;
+  height: 100px;
+  color: #fff;
+}
+
+footer h1 {
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+.nav-bar {
+  margin-top: 20px;
+}
+
+.nav-bar__item {
+  display: inline;
+  padding: 10px;
+  text-transform: uppercase;
+  border-left: 1px #fff solid;
+}
+
+.nav-bar__item:first-child {
+  border-left: none;
+}
+
+.nav-bar__item a {
+  text-decoration: none;
+  color: #fff;
 }

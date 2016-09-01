@@ -1,9 +1,23 @@
 
-$primary-color: #1D2026;
-
+$primary-color: #38A5DB;
 $secondary-color:#F1F1F1;
+$secondary-text: #fff;
 
 
+@mixin background-opacity($color, $opacity) {
+    background: rgba($color, $opacity);
+}
+
+@mixin background-size($size){
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
 
 .title{
 	color: $primary-color;
@@ -13,12 +27,15 @@ $secondary-color:#F1F1F1;
 }
 
 #banner{
-	height: 700px;
+	@include background-size(cover);
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../imagenes/office-1500461_1920.jpg) no-repeat center center fixed;
+	height: 800px;
 	overflow: auto;
+
 }
 
 .jumbotron{
-	margin:auto;
+	margin: 100px auto;
 	background: none;
 	color: $primary-color;
 	width: 500px;
@@ -31,12 +48,12 @@ $secondary-color:#F1F1F1;
 }
 
 #about{
-	background-color: $primary-color;
-	color: #fff;
+	background-color: $secondary-text;
+	color: $primary-color;
 	height: 600px;
 	text-align:center;
 	.title{
-		color: #fff;
+		color: $primary-color;
 	}
 }
 
@@ -53,6 +70,11 @@ $secondary-color:#F1F1F1;
 	}
 }
 
+
+#portfolio{
+	margin-bottom: 50px;
+}
+
 .portfolio-container{
 	text-align: center;
 }
@@ -60,15 +82,15 @@ $secondary-color:#F1F1F1;
 .project{
 	padding: 0;
 	height: 260px;
-	background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&txt=260%C3%97260&w=260&h=260); 
+	background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&txt=260%C3%97260&w=260&h=260);
 	-webkit-animation: fadeIn 1.5s;
-	
+	border: 4px $secondary-text solid;
 	&__description{
+		@include background-opacity($primary-color, 0.5);
 		height: 260px;
-		color: #fff;
+		color: $secondary-text;
 		font-weight: bold;
 		text-decoration: none;
-		background:rgba(138,170,217,0.7);
 		-webkit-animation: fadeIn 1s;
 	    animation: fadeIn 1s;
 		display: none;
@@ -84,7 +106,7 @@ $secondary-color:#F1F1F1;
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
-}  
+}
 @keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
@@ -99,6 +121,11 @@ $secondary-color:#F1F1F1;
 	}
 }
 
+
+#contact{
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../imagenes/hand-1076597_1920.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+}
 
 .contact{
 
@@ -121,7 +148,7 @@ $secondary-color:#F1F1F1;
 
 		.boton{
 			background-color: $primary-color;
-			color: #fff;
+			color: $secondary-text;
 		}
 
 	}
@@ -135,6 +162,7 @@ $secondary-color:#F1F1F1;
 
 .social{
 	width: 100%;
+
 	&-list{
 		padding: 0;
 		a{
@@ -144,7 +172,8 @@ $secondary-color:#F1F1F1;
 			display: inline;
 		}
 		.icon{
-			font-size: 40px;	
+			color: $primary-color;
+			font-size: 40px;
 			margin-top: 50px;
 			&-list{
 				padding-right: 50px;
@@ -156,5 +185,35 @@ $secondary-color:#F1F1F1;
 
 footer{
 	background-color: $primary-color;
-	height: 300px;
+	height: 100px;
+	color: $secondary-text;
+
+	h1{
+		font-size: 23px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	h3{
+		font-size: 18px;
+	}
+}
+
+.nav-bar{
+	margin-top: 20px;
+	&__list{
+
+	}
+	&__item{
+		display: inline;
+		padding: 10px;
+		text-transform: uppercase;
+		border-left: 1px #fff solid;
+		&:first-child{
+			border-left: none;
+		}
+		a{
+			text-decoration: none;
+			color: $secondary-text;
+		}
+	}
 }
